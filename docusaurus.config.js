@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
 	title: 'UniPad Document',
 	tagline: 'Document for UniPad',
-	url: 'https://docs.unipad.io',
+	url: 'https://unipad.io',
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
