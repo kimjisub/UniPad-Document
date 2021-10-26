@@ -24,13 +24,13 @@ const config = {
 				docs: {
 					sidebarPath: require.resolve('./sidebars.js'),
 					// Please change this to your repo.
-					editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+					editUrl: 'https://github.com/kimjisub/UniPad-Document/edit/main/',
 				},
 				blog: {
 					showReadingTime: true,
 					// Please change this to your repo.
 					editUrl:
-						'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+						'https://github.com/kimjisub/UniPad-Document/edit/main/blog/',
 				},
 				theme: {
 					customCss: require.resolve('./src/css/custom.css'),
@@ -82,7 +82,7 @@ const config = {
 					{
 						title: 'Community',
 						items: [
-							{
+							/*{
 								label: 'Stack Overflow',
 								href: 'https://stackoverflow.com/questions/tagged/docusaurus',
 							},
@@ -93,7 +93,7 @@ const config = {
 							{
 								label: 'Twitter',
 								href: 'https://twitter.com/docusaurus',
-							},
+							},*/
 						],
 					},
 					{
@@ -103,14 +103,14 @@ const config = {
 								label: 'Blog',
 								to: '/blog',
 							},
-							{
+							/*{
 								label: 'GitHub',
 								href: 'https://github.com/facebook/docusaurus',
-							},
+							},*/
 						],
 					},
 				],
-				copyright: `Copyright © ${new Date().getFullYear()} UniPad. Built with Docusaurus.`,
+				copyright: `Copyright © ${new Date().getFullYear()} UniPad.`,
 			},
 			prism: {
 				theme: lightCodeTheme,
