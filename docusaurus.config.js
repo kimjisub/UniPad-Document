@@ -56,6 +56,10 @@ const config = {
 						label: 'Docs',
 					},
 					{ to: '/blog', label: 'Blog', position: 'left' },
+					{
+						type: 'localeDropdown',
+						position: 'right',
+					},
 					/* {
 						href: 'https://github.com/kimjisub/UniPad-Document',
 						label: 'GitHub',
@@ -113,6 +117,11 @@ const config = {
 				darkTheme: darkCodeTheme,
 			},
 		}),
+
+	i18n: {
+		defaultLocale: 'en',
+		locales: ['en', 'ko'],
+	},
 };
 
 module.exports = config;
