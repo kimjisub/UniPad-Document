@@ -9,7 +9,7 @@ const config = {
 	title: 'UniPad Document',
 	tagline: 'Document for UniPad',
 	url: 'https://unipad.io',
-	baseUrl: '/',
+	baseUrl: '/UniPad-Document/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
 	favicon: 'img/favicon.ico',
