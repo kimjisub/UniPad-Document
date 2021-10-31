@@ -1,10 +1,8 @@
 ---
-id: about
-title: 개요
+id: introduction
+title: 소개
 sidebar_position: 1
 ---
-
-# 유니팩 구조
 
 유니팩은 UniPad의 프로젝트 파일입니다. Ableton Live에서 사용하는 .als 파일과는 별개로, 독자적인 구조를 사용합니다. 유니팩은 압축 형식으로 .zip 확장자를 사용합니다.
 
@@ -12,13 +10,13 @@ sidebar_position: 1
 
 UniPack has **five** files.
 
-|이름|형식|내용|
-|------|---|---|
-|info|📄파일|유니팩 설명 및 속성값|
-|sounds|📁폴더|사운드 파일을 담는 폴더|
-|keySound|📄파일|사운드 파일을 버튼에 매핑한다.|
-|keyLED|📁폴더|LED 이벤트 파일들을 담는 폴더이다.|
-|autoPlay|📄파일|자동재생을 위한 녹음 기록을 담는다.|
+| 이름 | 형식 | 내용 |
+| ------ | --- | --- |
+| info | 📄파일 | 유니팩 설명 및 속성값 |
+| sounds | 📁폴더 | 사운드 파일을 담는 폴더 |
+| keySound | 📄파일 | 사운드 파일을 버튼에 매핑한다. |
+| keyLED | 📁폴더 | LED 이벤트 파일들을 담는 폴더이다. |
+| autoPlay | 📄파일 | 자동재생을 위한 녹음 기록을 담는다. |
 
 :::info
 

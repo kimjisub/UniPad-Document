@@ -1,10 +1,8 @@
 ---
 id: info
-title: info
+title: 📄 info
 sidebar_position: 2
 ---
-
-# info
 
 제목, 제작자, 버튼개수, 체인개수 등 팩에 대한 기본 정보를 정의합니다.
 
@@ -13,7 +11,7 @@ sidebar_position: 2
 ## info의 구조
 
 | 명령어 | 형식 | 내용 |
-|---|---|---|
+| --- | --- | --- |
 | title | 문자열 | 팩의 제목 |
 | producerName | 문자열 | 팩의 제작자 |
 | buttonX | 자연수 | 세로 버튼 개수 |
@@ -24,7 +22,7 @@ sidebar_position: 2
 
 ## 예시
 
-```
+``` text
 title=Alan Walker - Faded
 producerName=Abc, Bcd
 buttonX=8

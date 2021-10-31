@@ -1,10 +1,8 @@
 ---
-id: about
-title: overview
+id: introduction
+title: Introduction
 sidebar_position: 1
 ---
-
-# Structure of the UniPack
 
 The `UniPack`, is the project file of `UniPad`, has contained an individual structure unlike the files using .als in Ableton Live. The UniPack uses `.zip` format.
 
