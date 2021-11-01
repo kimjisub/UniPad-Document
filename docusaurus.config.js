@@ -71,11 +71,15 @@ const config = {
 				style: 'dark',
 				links: [
 					{
-						title: 'Docs',
+						title: 'Links',
 						items: [
 							{
-								label: 'Tutorial',
+								label: 'Document',
 								to: '/docs/intro',
+							},
+							{
+								label: 'Blog',
+								to: '/blog',
 							},
 						],
 					},
@@ -121,6 +125,14 @@ const config = {
 	i18n: {
 		defaultLocale: 'en',
 		locales: ['en', 'ko'],
+		localeConfigs: {
+			en: {
+				label: 'English',
+			},
+			ko: {
+				label: '한국어',
+			},
+		},
 	},
 };
 
