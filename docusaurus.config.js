@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	title: 'UniPad Document',
-	tagline: 'Document for UniPad',
+	title: 'UniPad',
+	tagline: '리듬을 연주하다, UniPad',
 	url: 'https://unipad.io',
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
