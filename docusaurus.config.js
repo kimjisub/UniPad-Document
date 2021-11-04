@@ -16,13 +16,6 @@ const config = {
 	favicon: 'img/favicon.ico',
 	organizationName: 'kimjisub', // Usually your GitHub org/user name.
 	projectName: 'UniPad-Document', // Usually your repo name.
-	scripts: [
-		{
-			src: '/js/fix-location.js',
-			async: false,
-			defer: false,
-		},
-	],
 
 	presets: [
 		[
