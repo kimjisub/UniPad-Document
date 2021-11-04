@@ -10,11 +10,13 @@ const config = {
 	tagline: '리듬을 연주하다, UniPad',
 	url: 'https://unipad.io',
 	baseUrl: '/',
+	trailingSlash: false,
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
 	favicon: 'img/favicon.ico',
 	organizationName: 'kimjisub', // Usually your GitHub org/user name.
 	projectName: 'UniPad-Document', // Usually your repo name.
+	clientModules: [require.resolve('./fix-location.js')],
 
 	presets: [
 		[
@@ -42,6 +44,9 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
+			themeConfig: {
+				sidebarCollapsible: false,
+			},
 			navbar: {
 				title: 'UniPad',
 				logo: {
