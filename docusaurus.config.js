@@ -10,7 +10,6 @@ const config = {
 	tagline: '리듬을 연주하다, UniPad',
 	url: 'https://unipad.io',
 	baseUrl: '/',
-	trailingSlash: false,
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
 	favicon: 'img/favicon.ico',
