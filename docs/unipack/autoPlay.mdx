@@ -4,36 +4,35 @@ title: 📄 autoPlay
 sidebar_position: 6
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-
-팩을 자동으로 연주해주기 위한 **버튼 터치 및 체인 변경**에 대한 데이터를 담습니다. 자동재생을 켠 후 일시정지를 하면 **연습모드**로 전환되며 이 또한 자동재생 데이터 기반으로 작동합니다. `UniPad`의 녹음 기능으로 **autoPlay** 데이터를 **녹음**할 수 있습니다.
+Save the data about **Button Touch and Chain changes** to play the pack automatically. If you pause after turning on automatic playback, you will switch to **Practice Mode**, which also works based on automatic playback data. AutoPlay data can be recorded with the recording function of `UniPad`.
 
 ---
 
-## 구조
+## Structure
 
 <Tabs>
 <TabItem value="chain" label="chain" default>
 
-체인을 **변경**합니다.
+**Change** the chain
 
-| chain | 체인 |
-| --- | --- |
-| chain | 3 |
-| c | 3 |
+| chain | `chain` |
+| ----- | ------- |
+| chain | 3       |
+| c     | 3       |
 
 </TabItem>
 
 <TabItem value="on" label="on">
 
-좌표의 버튼을 누릅니다.
+Press the button on the coordinates.
 
-| on | x | y |
+| on  | x   | y   |
 | --- | --- | --- |
-| on | 6 | 4 |
-| o | 6 | 4 |
+| on  | 6   | 4   |
+| o   | 6   | 4   |
 
 </TabItem>
 
@@ -41,37 +40,37 @@ import TabItem from '@theme/TabItem';
 
 좌표의 눌린 버튼을 땝니다.
 
-| off | x | y |
+| off | x   | y   |
 | --- | --- | --- |
-| off | 6 | 4 |
-| f | 6 | 4 |
+| off | 6   | 4   |
+| f   | 6   | 4   |
 
 </TabItem>
 
 <TabItem value="touch" label="touch">
 
-on 명령어와 off 명령어를 **동시**에 실행합니다.
+Run the on command and off command at **simultaneously**.
 
-| touch | x | y |
-| --- | --- | --- |
-| touch | 6 | 4 |
-| t | 6 | 4 |
+| touch | x   | y   |
+| ----- | --- | --- |
+| touch | 6   | 4   |
+| t     | 6   | 4   |
 
 </TabItem>
 
 <TabItem value="delay" label="delay">
 
-다음 이벤트까지 **지연시간**을 둡니다.
+Give a **Delay Time** until the next event.
 
-| delay | ms |
-| --- | --- |
+| delay | ms  |
+| ----- | --- |
 | delay | 120 |
-| d | 120 |
+| d     | 120 |
 
 </TabItem>
 </Tabs>
 
-``` text title="autoPlay"
+```text title="autoPlay"
 c 1
 o 3 3
 d 100
@@ -81,5 +80,5 @@ t 4 4
 ```
 
 :::info
-20ms 이내의 이벤트들은 연습모드 실행 시 **동시터치**로 인식됩니다.
+Events within 20 ms are recognized as **simultaneous touch** when executing practice mode.
 :::
