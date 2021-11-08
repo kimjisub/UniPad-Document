@@ -4,25 +4,25 @@ title: 📄 info
 sidebar_position: 2
 ---
 
-제목, 제작자, 버튼개수, 체인개수 등 팩에 대한 기본 정보를 정의합니다.
+Define basic information about the pack, such as title, manufacturer, number of buttons, number of chains, etc.
 
 ---
 
-## info의 구조
+## Structure of info
 
-| 명령어 | 형식 | 내용 |
-| --- | --- | --- |
-| title | 문자열 | 팩의 제목 |
-| producerName | 문자열 | 팩의 제작자 |
-| buttonX | 자연수 | 세로 버튼 개수 |
-| buttonY | 자연수 | 가로 버튼 개수 |
-| chain | 자연수 | 체인 개수 |
-| squareButton | 불린 | 버튼의 유형 |
-| websiteURL | 문자열 | 웹사이트 URL |
+| Command      | Structure      | Content                      |
+| ------------ | -------------- | ---------------------------- |
+| title        | String         | title of Pack                |
+| producerName | String         | developer of Pack            |
+| buttonX      | Natural number | number of vertical buttons   |
+| buttonY      | Natural number | number of horizontal buttons |
+| chain        | Natural number | number of chains             |
+| squareButton | Boolean        | type of the buttons          |
+| websiteURL   | String         | wesite's URL                 |
 
-## 예시
+## Example
 
-``` text
+```text
 title=Alan Walker - Faded
 producerName=Abc, Bcd
 buttonX=8
@@ -33,5 +33,5 @@ websiteUrl=https://unipad.io
 ```
 
 :::caution
-이전 형식에 있었던 **landscape** 명령어는 제거되었습니다.
+The **landscape** command in the previous version has been removed.
 :::
