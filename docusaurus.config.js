@@ -16,6 +16,14 @@ const config = {
 	organizationName: 'kimjisub', // Usually your GitHub org/user name.
 	projectName: 'UniPad-Document', // Usually your repo name.
 
+	scripts: [
+		{
+			src: 'https://static.cloudflareinsights.com/beacon.min.js',
+			defer: true,
+			'data-cf-beacon': '{"token": "e37228d667d5410b8009a067e6792045"}',
+		},
+	],
+
 	presets: [
 		[
 			'@docusaurus/preset-classic',
