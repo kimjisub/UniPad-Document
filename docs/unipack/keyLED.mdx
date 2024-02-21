@@ -4,35 +4,35 @@ title: 📁 keyLED
 sidebar_position: 5
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-LED 이벤트 정보를 담는 파일들을 모아두는 폴더입니다.
+Folder that collects files containing LED event information
 
 ---
 
-## LED 이벤트 파일의 **이름** 구조
+## **Name** structure of LED event file.
 
-| 체인 | x | y | 반복횟수 | 순서문자 |
-| --- | --- | --- | --- | --- |
-| 1 | 5 | 6 | | |
-| 3 | 8 | 8 | 0 | |
-| 4 | 1 | 1 | 1 | a |
-| 4 | 1 | 1 | 1 | 01 |
+| chain | x   | y   | Repetition | Order character |
+| ----- | --- | --- | ---------- | --------------- |
+| 1     | 5   | 6   |            |                 |
+| 3     | 8   | 8   | 0          |                 |
+| 4     | 1   | 1   | 1          | a               |
+| 4     | 1   | 1   | 1          | 01              |
 
-### 주의사항
+### Note
 
-- 반복횟수는 **생략이 가능**하며 기본값은 1입니다.
-- 반복횟수가 **0**일 때는 버튼을 **누르고 있는 동안**에 LED가 **반복 재생**됩니다.
-- 순서문자는 **다중매핑**을 위함이며, **순서문자**를 사용하기 위해서는 **반복횟수**를 생략할 수 없습니다.
-- 순서문자는 **영문자**나 **자릿수가 같은 숫자**를 사용합니다.
+- The number of iterations **can be omitted** and the default value is 1.
+- When the number of repetitions is **0**, the LED is **repetitively played** while the button is **pressing**
+- The order character is for **multimapping**, and **the number of repetitions** cannot be omitted to use **order character**.
+- Order characters use **English characters** or **numbered numbers with the same number of digits**.
 
-``` text title="가능한 예시 1"
+```text title="Possible example 1"
 1 4 2 1 a
 1 4 2 1 b
 ```
 
-``` text title="가능한 예시 2"
+```text title="Possible example 2"
 1 7 3 1 01
 1 7 3 1 02
 ...
@@ -40,7 +40,7 @@ LED 이벤트 정보를 담는 파일들을 모아두는 폴더입니다.
 1 7 3 1 10
 ```
 
-``` text title="불가능한 예시"
+```text title="Impossible example"
 1 7 3 1 1
 1 7 3 1 2
 ...
@@ -48,72 +48,72 @@ LED 이벤트 정보를 담는 파일들을 모아두는 폴더입니다.
 1 7 3 1 10
 ```
 
-## LED 이벤트 **파일**의 구조
+## The structure of the LED event **file**
 
 <Tabs>
   <TabItem value="on" label="on" default>
 
-LED를 (x, y) 좌표에 **색코드** 색상으로 켜고 런치패드에 **벨로시티**를 보냅니다. **색코드**가 **auto**인 경우에는 자동으로 **색코드**를 정해줍니다. 런치패드 S, mini 기종은 비슷한 색상을 표현해줍니다. x 가 *인 경우 런치패드의 원 버튼의 색상을 지정합니다. (1~32)
+Turn on the LED to the (x, y) coordinates in **color code** and send **bellocity** to the lunch pad. If **color code** is **auto**, **color code** is automatically determined. Lunchpad S and mini models express similar colors. If x is \*, you can specify the color of the chain button on the launchpad. (1~32)
 
-| on | x | y | 색코드 | 벨로시티 |
-| --- | --- | --- | --- | --- |
-| on | 3 | 4 | FFA726 | ​|
-| on | 3 | 4 | 2196F3 | 45 |
-| on | 3 | 4 | auto | 29 |
-| on | \* | 32 | auto | 15 |
-| o | 3 | 4 | FFA726 | ​ |
-| o | 3 | 4 | 2196F3 | 45 |
-| o | 3 | 4 | a | 29 |
-| o | \* | 32 | a | 15 |
+| on  | x   | y   | Color code | Velocity |
+| --- | --- | --- | ---------- | -------- |
+| on  | 3   | 4   | FFA726     | ​        |
+| on  | 3   | 4   | 2196F3     | 45       |
+| on  | 3   | 4   | auto       | 29       |
+| on  | \*  | 32  | auto       | 15       |
+| o   | 3   | 4   | FFA726     | ​        |
+| o   | 3   | 4   | 2196F3     | 45       |
+| o   | 3   | 4   | a          | 29       |
+| o   | \*  | 32  | a          | 15       |
 
   </TabItem>
   <TabItem value="off" label="off">
 
-LED를 끕니다.
+Turn off the LED.
 
-| off | x | y |
+| off | x   | y   |
 | --- | --- | --- |
-| off | 3 | 4 |
-| off | * | 2 |
-| f | 3 | 4 |
-| f | * | 2 |
+| off | 3   | 4   |
+| off | \*  | 2   |
+| f   | 3   | 4   |
+| f   | \*  | 2   |
 
   </TabItem>
   <TabItem value="delay" label="delay">
 
-다음 이벤트까지 **지연시간**을 둡니다.
+Make **delay time** until the next event.
 
-| delay | ms |
-| --- | --- |
+| delay | ms  |
+| ----- | --- |
 | delay | 120 |
-| d | 120 |
+| d     | 120 |
 
   </TabItem>
 </Tabs>
 
 :::info
 
-벨로시티 값은 **런치패드와의 통신**을 지원하기 위해서 입니다.
+The Velocity value is to support **communication with the launch pad**.
 
-색코드 대신 **auto** 모드를 권장합니다.
+**auto** mode is recommended instead of color code.
 
-다른 곳에서 켜진 **LED**는 그 파일에서만 끌 수 있습니다.
+**LED** turned off elsewhere can only be turned off in that file.
 
-만약 다른 파일에서 끄고싶다면 해당 좌표의 **LED**를 덮어씌우고 **off** 명령어로 끄면 됩니다.
+If you want to turn it off from another file, you can overwrite **LED** of that coordinate and turn it off with the **off** command.
 
-``` text title="1 1 1"
+```text title="1 1 1"
 o 1 1 a 45
 ```
 
-``` text title="1 1 2"
+```text title="1 1 2"
 o 1 1 a 0
 f 1 1
 ```
 
 :::
 
-## 벨로시티 색상표
+## Veolcity color table
 
 ![veolcity color table](http://i.imgur.com/Wc4Yh7j.jpg)
 
-출처 : [launchpad pro's forum](http://forum.launchpad-pro.com/viewtopic.php?id=4055)
+Source : [launchpad pro's forum](http://forum.launchpad-pro.com/viewtopic.php?id=4055)
